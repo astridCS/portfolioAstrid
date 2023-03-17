@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:ital,wght@0,900;1,400&display=swap');
+/* Variables */
+body {
+  margin: 0;
+  font-size: 1.2em;
+  font-family: arial;
+  background-color: #e7f3f9;
+ 
+}
+.messagedefilant {
+  display: block;
+  margin: 40px auto;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  max-width: 640px;
+  height: 60px;
+}
+ 
+.messagedefilant div {
+  position: absolute;
+  min-width: 100%; /* au minimum la largeur du conteneur */
+}
+ 
+.messagedefilant div span, 
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  white-space: nowrap;
+  top:0;
+}
+ 
+.messagedefilant div span {
+  animation: defilement 10s infinite linear;
+  background: #cde;
+}
+ 
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 10s infinite linear;
+  background: #edc;
+}
+ 
+@keyframes defilement {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+@keyframes defilement2 {
+  0% { margin-left: 100%; }
+  100% { margin-left: 0%; }
+}
+ 
+#haut {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: red;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 10px;
+font-size: 14px;
+}
+
+#haut:hover {
+background-color: #ddd;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1894cc;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.site-slogan{
+  background: #1894cc;
+  color: whitesmoke;
+  box-shadow: 0px 5px 10px 0px #aaa;
+}
+.open{
+  font-size: 30px;
+  cursor: pointer;
+}
+.open:hover{
+  color: #076690;
+}
+.logo{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.4em;
+}
+.titre1{
+ color: #1894cc;
+}
+
+.titre{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.8em;
+ 
+}
+
+.header_titre_sect1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6em;
+  margin-top: 20%;
+}
+.lemenu{
+  position:  absolute;
+  z-index: 5000;
+}
+.light-mode {
+  --navbar-color: #222;
+  --navbar-bg-color: #F0F0F0;  
+}
+.dark-mode {
+  --navbar-color: #FFF;
+  --navbar-bg-color: #1894cc; 
+   z-index: 1000; 
+}*/
+
+/* Reset */
+* {
+  box-sizing: border-box; 
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+/* Basic style*/ 
+
+.couleur {
+  background-color: #e7f3f9;
+}
+
+
+/* debut style index */
+
+.curved {
+  position: relative;
+  background:  #DCDCDC;
+  filter: brightness(80%);
+  height: 10vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+.banniere{
+  width: 100%;
+  height: 600px;
+}
+.anim_text {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 600%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+  75% {
+  font-size: 600%;
+  margin-left: 25%;
+  width: 160%;
+}
+}
+.contenant{
+  position: relative;
+  text-align: center;
+}
+.container{
+  max-width: 1300px;
+}
+/*.header_titre_sect1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  }
+*/
+
+/* fin section1*/
+
+
+.text_sect2{
+  
+  font-size: 1.2;
+  background: #1894cc;
+}
+.text_sect3{
+  font-size: 1.2;
+}
+
+.anim_text {
+  font-size: 1.8em;
+  
+}
+.section_presentation{
+  background-image: url('../images/fond_present.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*min-height: 700px;*/
+}
+.img-activite{
+  height: 600px;
+}
+.sect_carousel{
+  height: 600px;
+}
+.icone{
+  width: 6em;
+  height: 6em;
+}
+.news{
+  filter: brightness(70%);
+  min-height: 400px;
+}
+.sectavfooter{
+  background: #076690; 
+}
+.slantedDivA{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url('../images/fond_present.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 30px;
+  color: #fff;
+  margin-bottom: 200px;
+    }
+
+.slantedDivA:after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #ff0000;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+}
+input{
+  font-family: 'FONTAWESOME';
+}
+
+footer{
+  background: #1894cc; 
+  font-size: 1.4em;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  position: relative;
+  bottom: 0; 
+  
+}
+.qui{
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+.titrequi {
+ 
+  display: inline-block;
+ 
+  padding-bottom: 5px;
+ 
+  position: relative;
+ 
+} 
+.titrequi:after{
+ 
+ content: "";
+ 
+  position: absolute;
+ 
+  width: 50%;
+ 
+  height: 1px;
+ 
+  bottom: 0;
+ 
+  left: 3%;
+ 
+  border-bottom: 5px solid darkgreen;
+ 
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:767.98px) {
+  
+  body{
+    font-size: 1em; 
+  }
+
+  .messagedefilant {
+  display: block;
+  margin: 40px auto;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  max-width: 640px;
+  height: 60px;
+}
+ 
+.messagedefilant div {
+  position: absolute;
+  min-width: 100%; /* au minimum la largeur du conteneur */
+}
+ 
+.messagedefilant div span, 
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6em;
+  white-space: nowrap;
+  top:0;
+}
+ 
+.messagedefilant div span {
+  animation: defilement 10s infinite linear;
+  background: #cde;
+}
+ 
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 10s infinite linear;
+  background: #edc;
+}
+ 
+@keyframes defilement {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+@keyframes defilement2 {
+  0% { margin-left: 100%; }
+  100% { margin-left: 0%; }
+}
+ 
+#haut {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: red;
+color: white;
+cursor: pointer;
+padding: 8px;
+border-radius: 10px;
+font-size: 0.8em;
+}
+
+#haut:hover {
+background-color: #ddd;
+}
+
+
+ .container{
+  width: 100%;
+ }
+ .site-slogan{
+  background: #1894cc;
+  color: whitesmoke;
+  box-shadow: 0px 5px 10px 0px #aaa;
+}
+.open{
+  margin-left: 8px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.open:hover{
+  color: #076690;
+}
+.logo{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.2em;
+}
+.titre1{
+ color: #1894cc;
+}
+.titre{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5em;
+ 
+}
+
+.text_sect2 {
+  background: #1894cc;
+}
+
+.text_sect3 p{
+
+  background: whitesmoke;
+}
+
+.anim_text h1{
+  font-size: 1.1em;
+  
+}
+.anim_text {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+  75% {
+  font-size: 300%;
+  margin-left: 25%;
+  width: 160%;
+}
+}
+.section_presentation h1{
+  font-size: 1.2em;
+}
+ 
+ p{
+  font-size: 1em;
+ } 
+ .w-container p{
+  font-size: 1em;
+ }
+.img-activite{
+  height: 300px;
+}
+.sect_carousel{
+  height: 300px;
+}
+.icone{
+  width: 4em;
+  height: 4em;
+}
+.news{
+  filter: brightness(70%);
+  min-height: 200px;
+}
+.sectavfooter{
+  background: #076690; 
+  font-size: 1.07em;
+}
+footer{
+  background: #1894cc; 
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  position: relative;
+  bottom: 0; 
+  
+}
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and  (min-device-width:768px) and (max-device-width:1024px) {
+  body{
+    font-size: 1em;
+  } 
+
+.videoModule{
+  width: 400px;
+}
+.open{
+  margin-left: 8px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.open:hover{
+  color: #076690;
+}
+.site-slogan{
+  background: #1894cc;
+  color: whitesmoke;
+  box-shadow: 0px 5px 10px 0px #aaa;
+}
+.logo{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.2em;
+}
+.titre1{
+ color: #1894cc;
+}
+.titre{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5em;
+ 
+}
+
+ .messagedefilant {
+  display: block;
+  margin: 40px auto;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  max-width: 640px;
+  height: 60px;
+}
+ 
+.messagedefilant div {
+  position: absolute;
+  min-width: 100%; 
+}
+ 
+.messagedefilant div span, 
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6em;
+  white-space: nowrap;
+  top:0;
+}
+ 
+.messagedefilant div span {
+  animation: defilement 10s infinite linear;
+  background: #cde;
+}
+ 
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 10s infinite linear;
+  background: #edc;
+}
+ 
+@keyframes defilement {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+@keyframes defilement2 {
+  0% { margin-left: 100%; }
+  100% { margin-left: 0%; }
+}
+ 
+#haut {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: red;
+color: white;
+cursor: pointer;
+padding: 10px;
+border-radius: 10px;
+font-size: 0.9em;
+}
+#haut:hover {
+background-color: #ddd;
+}
+
+.text_sect2 {
+  font-size: 1.1em;
+  background: #1894cc;
+}
+
+.text_sect3 p{
+ 
+  background: whitesmoke;
+}
+
+.anim_text h1{
+  font-size: 1.3em;
+ 
+}
+
+h2{
+  font-size: 1.1em;
+}
+ p{
+  font-size: 1em;
+ }
+.w-container p{
+  font-size: 1em;
+ }
+.img-activite{
+  height: 300px;
+}
+.sect_carousel{
+  height: 300px;
+}
+.icone{
+  width: 4em;
+  height: 4em;
+}
+.news{
+  filter: brightness(70%);
+  min-height: 200px;
+}
+.sectavfooter{
+  background: #076690; 
+  font-size: 1.07em;
+
+}
+footer{
+  background: #1894cc; 
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  position: relative;
+  bottom: 0; 
+  
+}
+}
+
+
+
+
+
